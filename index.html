@@ -7,20 +7,42 @@
         <!-- Web Title -->
         <title>Belajar OpenLayers 6 Web Map</title>
 
-        <!-- Local CSS -->
-        <link rel="stylesheet" href="./css/map.css">
-
         <!-- OpenLayers CSS -->
         <link rel="stylesheet" href="./css/libs/ol.css">
+        <!-- Local CSS -->
+        <link rel="stylesheet" href="./css/map.css">
     </head>
 
     <body>
-        <div id="idmap" class="map"></div>
+        <main>
+            <section>
+                <div class="grid-container">
 
-        <!-- Local JS -->
-        <script src="./js/map.js"></script>
+                    <!-- Show map selection -->
+                    <div class="grid-1">
+                        <div class="sidebar">
+                            <h2>Base Layers</h2>
+                            <form action="#">
+                                <input type="radio" name="baseLayerRadioButton" value="OSMStandard" checked> OSM Standard            <br>
+                                <input type="radio" name="baseLayerRadioButton" value="OSMHumanitarian" > OSM Humanitarian    <br>
+                                <input type="radio" name="baseLayerRadioButton" value="StamenTerrain" > Stamen Terrain        <br>
+                                <input type="radio" name="baseLayerRadioButton" value="StamenWatercolor" > Stamen Watercolor  <br>
+                                <input type="radio" name="baseLayerRadioButton" value="StamenToner" > Stamen Toner            <br>
+                            </form>
+                        </div>
+                    </div>
 
+                    <!-- Show map -->
+                    <div class="grid-2">
+                        <div id="js-map" class="map"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    
         <!-- OpenLayers JS -->
         <script src="./js/libs/ol.js"></script>
+        <!-- Local JS -->
+        <script src="./js/map.js"></script>
     </body>
 </html>
